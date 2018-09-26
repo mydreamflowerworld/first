@@ -1,0 +1,64 @@
+1.智能合约是什么？
+在区块链上运行的程序
+
+2.智能合约能做什么？
+部署一个智能合约，提供运行于以太坊上的新加密代币
+智能合约和一般程序的差异
+1）整合金流容易
+2）部署时与后续写入时需费用
+3）储存资料的成本更高
+4）部署后无法修改
+
+3.将智能合约部署到区块链的流程
+                    local                                                  ethereum
+.sol——compile——Contract Bytecode —— deploy ——Contract
+   local                                     ethereum
+Account —— call —— Contract —— EVM
+
+4.solidity实现一个合约
+pragma solidity ^0.4.4;
+/*
+pragma：版本声明
+solidity:开发语言
+0.4.4：当前合约版本
+*/
+contract Person{
+    uint _height;
+    uint _age;//加_代表规范
+    address _owner;//代表合约拥有着 
+    
+    //构造函数 ，用于初始化 
+    function Person(){
+        _height=90;
+        _age=29;
+        _owner=msg.sender;
+    }   
+    
+    function owner() constant returns(address){
+        return _owner;
+    }
+    //set方法，可以修改height属性 
+    function setHeight(uint height){
+        _height=height;
+    }
+    //读取 _height，constant代表方法只读 
+    function height() constant returns(uint){
+        return _height;
+    }
+    
+    function setAge(uint age){
+        _age=age;
+    }
+    
+    function age() constant returns(uint){
+        return _age;
+    }
+    
+    function kill(){
+        if (_owner==msg.sender){
+            selfdestruct(msg.sender);//析构函数 
+        }
+        
+    }
+}
+
