@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <h1>my javascript code in "out.js"</h1>
+    </head>
+    
+    <body>
+        <script>
+            for(var i=0;i<10;i++){
+                document.write("number is "+i+"<br>");
+            }
+            for(var i=0;i<10;i++){
+                if(i==5||i==6)continue;
+                if(i==8)break;
+                document.write(i);
+            }
+            document.write("<br>");
+            function my_func(){
+                document.write("第一次声明");
+            }
+            my_func()
+            document.write("<br>");
+            function my_func(){
+                document.write("第二次声明");
+            }
+            my_func()
+        </script>
+    </body>
+</html>

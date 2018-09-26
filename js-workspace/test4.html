@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+        function mDown(obj){
+            obj.style.backgroundColor="#1ec5e5";
+            obj.innerHTML="relese your mouse"
+        }
+        function mUp(obj){
+            obj.style.backgroundColor="white";
+            obj.innerHTML="pass here"
+        }    
+        </script>
+    </head>
+    <body>
+        <div style="
+                    background-color: bisque;
+                    width:200px;
+                    height:200px;
+                    margin:20px;
+                    padding-top:20px;
+                    color:blueviolet;
+                    font-weight: bold;
+                    font-size:18px;
+                    text-align: center;"
+             onmousedown="mDown(this)"
+             onmouseup="mUp(this)"
+             >press here,ahahh</div>
+    </body>
+</html>
