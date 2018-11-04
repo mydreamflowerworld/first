@@ -1,0 +1,53 @@
+body{
+            background: url(56.jpg) no-repeat center 0px;
+            background-position: center 0;
+            background-size: cover;
+        }
+		input{
+            width:50px;
+            height: 20px;
+            border:1px solid black;}
+		.time1 span{
+            color:white;
+            font-size: 150px;
+            font-family: cursive;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);}
+        .border{
+            display:table-cell;
+            vertical-align:bottom;
+            font-size: 20px;
+            color:white;
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            border-color: white;
+            border-width: medium;
+            border:4px solid #FFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);}
+        .border p{
+            position:absolute;
+            bottom:10px;
+            padding:10px;
+            margin:0px;
+            text-align: center;
+        }
+        .time2{
+            text-align: center;
+            color:white;
+            font-size: 20px;
+            font-family: cursive;
+        }

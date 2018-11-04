@@ -1,0 +1,94 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+        body{
+            background: url(56.jpg) no-repeat center 0px;
+            background-position: center 0;
+            background-size: cover;
+        }
+		input{
+            width:50px;
+            height: 20px;
+            border:1px solid black;}
+        .time1{
+            text-align: center;
+            color:white;
+            font-size: 20px;
+            font-family: cursive;
+        }
+		.time2 span{
+            color:white;
+            font-size: 150px;
+            font-family: cursive;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);}
+        .border{
+            display:table-cell;
+            vertical-align:bottom;
+            font-size: 20px;
+            color:white;
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            border-color: white;
+            border-width: medium;
+            border:4px solid #FFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);}
+        .border p{
+            position:absolute;
+            bottom:10px;
+            padding:10px;
+            margin:0px;
+            text-align: center;
+        }
+
+	</style> 
+    
+</head>
+<body>
+	<form class="time1">目的日期：
+		<input id="inyear" name="year" type="text"><span>年</span>
+		<input id="inmonth" name="month" type="text"><span>月</span>
+		<input id="inday" name="day" type="text"><span>日</span>
+		<input type="button" value="确定" onclick="show()">
+	</form>
+	<div class="time2">
+		<span id="1"></span>
+	</div>
+    <div class="border">
+        <p>CET6 SPOKENING TEST</p>
+    </div>
+    <script>
+    function show(){
+	function mess(){
+      var year=Number(document.getElementById("inyear").value);
+      var month=Number(document.getElementById("inmonth").value)-1;
+      var day=Number(document.getElementById("inday").value);
+      //获取截至时间
+      var endDate= new Date(year,month,day);
+      //获取当前时间
+      var nowDate=Date.now();
+      //时间差
+      var left_time=Math.round((endDate-nowDate)/1000);
+      var day1=parseInt(left_time/(3600*24));
+      document.getElementById("1").innerHTML=day1;}
+      setInterval(mess,1000);}
+</script>
+    </body>
+    
+</html>
